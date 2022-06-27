@@ -1,0 +1,46 @@
+#title {
+    border: red solid 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+#search-container {
+    display: flex;
+    justify-content: center;
+}
+
+#search {
+    border: red solid 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+}
+
+#api {
+    /* border: red solid 3px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#weather-api {
+    border: red solid 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+}
+
+#traffic-api {
+    border: red solid 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+}
