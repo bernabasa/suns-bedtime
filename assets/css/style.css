@@ -6,14 +6,31 @@
     align-items: center;
     height: 150px;
 }
+#
 
 #search-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    width: 60px; 
+}
+#city-search {
+    display: flex;
+    justify-content: left;
+    width: 60px;   
+}
+#city-input {
+    display: flex;
+    justify-content: left;
+    width: 60px; 
+}
+#searchBtn {
+    display: flex;
+    justify-content: left;
+    width: 60px;
 }
 
 #search {
-    border: red solid 3px;
+    border: red solid 20px;
     display: flex;
     justify-content: center;
     align-items: center;

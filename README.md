@@ -1,11 +1,15 @@
 # group-project-1
+A simple and easly accessible page that shares useful informations in our day to day life.
+
+# Purpose
+To address weather and traffic data.
 
 
 
 
-line 6
-another change
-try again
-here is some stuff
+## Built with
+ * HTML 
+ * CSS 
+ * JavaScript
 
-new branch change
+

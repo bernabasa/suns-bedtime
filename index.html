@@ -13,7 +13,36 @@
     </div>
 
     <div id="search-container">
-        <p id="search">City, State, Zip Code</p>
+        <div class="row">
+            <div class="col-12 col-md-3 bg-light mt-3">
+                <form id="city-search">
+                    <label for="city-input" class="my-1">Search for a city:</label>
+                    <div class="input-group mb-3">
+                        <input id="city-input" type="text" class="form-control" placeholder="search" />
+                        <div class="input-group-append">
+                            <button id="searchBtn" class="btn btn-primary" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+                <button id="clearHistory" class="btn btn-primary mb-3 col-12 col-md-12" type="button">Clear History</button>
+                
+                
+                <div id="history" class="col-12 col-md 3 bg-light border-top mt-2 pt-2">
+                </div>
+            </div>
+               
+                <div id="currentForecast" class="col-12 col-md-8 pt-4 mt-3">
+                    <span id="cityName"></span></h4>
+                </div>
+        </div>
+    </div>
+    
+            
+        
+        
     </div>
 
     <div id="api">
@@ -25,6 +54,6 @@
         </div>
     </div>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/traffic.js"></script>
 </body>
 </html>
