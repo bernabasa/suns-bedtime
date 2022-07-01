@@ -1,9 +1,20 @@
+
+var lon
+var lat
+
+
+
+
+
+
+
+
 function forecast(city) {
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+city+'&APPID=869a3796e787dba42b7607508ecc71e0')
     .then(response => response.json())
     .then(function(response) {
-        var lon = response.coord.lon;
-        var lat = response.coord.lat;
+        lon = response.coord.lon;
+        lat = response.coord.lat;
         cityname = response.name;
         console.log(lon);
         console.log(lat);
