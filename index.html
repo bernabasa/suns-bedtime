@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bulma.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Group Project 1</title>
 </head>
@@ -110,10 +111,12 @@
 
 
         
-    <div id="api">
+    <div id="api" class="container">
         <!--Weather Api -->>
         <div id="weather-api">
-            <h2>Weather Forecast</h2>
+            <div class="columns">
+                <h2>Weather Forecast</h2>
+            </div>
             
             
             
@@ -139,26 +142,40 @@
             
             
             
+            <div class="columns">
+                
+                <h id="temp"></h>
+                <h id="feels"></h>
+                <h id="weather"></h>
+                <h id="description"></h>
+                <h id="humidity"></h>
+                <img id="weatherimage" src="" alt="">
             
+                <p id="futuredate0"></p>
+                <p id="futuretemp0"></p>
+                <p id="futurewind0"></p>
+                <p id="futurehumidity0"></p>
             
+                <p id="futuredate1"></p>
+                <p id="futuretemp1"></p>
+                <p id="futurewind1"></p>
+                <p id="futurehumidity1"></p>
             
-            <h id="temp"></h>
-            <h id="feels"></h>
-            <h id="weather"></h>
-            <h id="description"></h>
-            <h id="humidity"></h>
-            <img id="weatherimage" src="" alt="">
+                <p id="futuredate2"></p>
+                <p id="futuretemp2"></p>
+                <p id="futurewind2"></p>
+                <p id="futurehumidity2"></p>
             
+                <p id="futuredate3"></p>
+                <p id="futuretemp3"></p>
+                <p id="futurewind3"></p>
+                <p id="futurehumidity3"></p>
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
+                <p id="futuredate4"></p>
+                <p id="futuretemp4"></p>
+                <p id="futurewind4"></p>
+                <p id="futurehumidity4"></p>
+            </div>
             
             
             
@@ -290,6 +307,7 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/api2.js"></script>
     <script src="./assets/js/weather.js"></script>
 </body>

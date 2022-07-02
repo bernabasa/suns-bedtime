@@ -5,6 +5,31 @@ var lat
 var cityinput
 var input
 
+const dates = []
+
+function makedatearray() {
+    for (let i = 0; i < 5; i++) {
+                        
+        var fdate = moment().add(i, "day").format("YYYY-MM-DD");
+        dates[i] = fdate;
+        
+        
+    }
+}
+
+
+makedatearray();
+console.log(dates);
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19,7 +44,19 @@ function forecast(city) {
         console.log(lat);
         
 
-        fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&exclude=minutely,hourly,alerts&units=imperial&appid=ede08bcde83c2fa795daf3201714e151')
+        
+
+        getweather(lat,lon);
+
+
+
+    })
+
+
+}
+
+function getweather(lat,lon) {
+    fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&exclude=minutely,hourly,alerts&units=imperial&appid=ede08bcde83c2fa795daf3201714e151')
         .then(response => response.json())
         .then(function(response) {
 
@@ -54,20 +91,59 @@ function forecast(city) {
 
 
 
+            for (let i = 0; i < 5; i++) {
+                        
+                var fdate = moment().add(i, "day").format("M/D/YYYY");
+                var ftemp = response.daily[i].temp.day;
+                var fwind = response.daily[i].wind_speed;
+                var fhumid = response.daily[i].humidity;
+
+                //var f1date = $("#futuredate"+i);
+                var f1temp = $("#futuretemp"+i);
+                var f1wind = $("#futurewind"+i);
+                var f1humid = $("#futurehumidity"+i);
+
+                //f1date.text(fdate);
+                f1temp.text("Temp: "+ftemp);
+                f1wind.text("Wind: "+fwind);
+                f1humid.text("Humidity: "+fhumid);
+             
+                //dates[i] = fdate;
+                
+                
+            }
+            
 
 
 
 
         })
-
-
-
-
-
-    })
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
