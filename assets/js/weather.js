@@ -2,9 +2,8 @@
 var lon
 var lat
 
-
-
-
+var cityinput
+var input
 
 
 
@@ -18,6 +17,7 @@ function forecast(city) {
         cityname = response.name;
         console.log(lon);
         console.log(lat);
+        
 
         fetch('https://api.openweathermap.org/data/2.5/onecall?lat='+lat+'&lon='+lon+'&exclude=minutely,hourly,alerts&units=imperial&appid=ede08bcde83c2fa795daf3201714e151')
         .then(response => response.json())
@@ -35,6 +35,25 @@ function forecast(city) {
             console.log(description);
             console.log(humidity);
 
+            var settemp = $("#temp");
+            var setfeels = $("#feels");
+            var setweather = $("#weather");
+            var setdescription = $("#description");
+            var sethumidity = $("#humidity");
+
+            settemp.text(temp);
+            setfeels.text(feels);
+            setweather.text(weather);
+            setdescription.text(description);
+            sethumidity.text(humidity);
+
+            var icon = response.current.weather[0].icon;
+            var setimage = $("#weatherimage");
+            console.log(icon);
+            setimage.attr("src", "./assets/images/dolphinplaceholder.jpg");
+
+
+
 
 
 
@@ -45,21 +64,41 @@ function forecast(city) {
 
 
 
-
-
-
-
-
-
     })
-
-
-
-
 
 
 }
 
-var test = "washington";
 
-forecast(test);
+
+
+$("#city-search").on('submit', function(e) {
+
+    //not sure why this works but this guy says it does: https://stackoverflow.com/questions/22742194/form-validation-text-error-text-disappears  
+    e.preventDefault();
+
+    var cityinput = $("#city-input").val();
+    console.log(cityinput);
+
+    if (cityinput === "" || cityinput === null) {
+    } else {
+        input = cityinput.toLowerCase();
+        console.log(input);
+        forecast(input);
+        //futureforecast(city);
+    }
+
+})
+
+
+
+
+
+
+
+
+
+
+//var test = "washington";
+
+//forecast(test);
