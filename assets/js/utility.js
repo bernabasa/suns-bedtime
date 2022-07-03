@@ -16,6 +16,18 @@ makedatearray();
 console.log(dates);
 
 
+// change date format
+var printDates = []
 
+function dateFormatArray() {
+    for (let i = 0; i < 5; i++) {
+                        
+        var dateFormat = moment(dates[i]).format('l');
+        printDates[i] = dateFormat;
+        
+        
+    }
+}
 
-
+dateFormatArray();
+// console.log(printDates);
