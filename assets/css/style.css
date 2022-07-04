@@ -55,17 +55,17 @@
 }
 
 .sunCardContainer {
-    border: red solid 3px;
+    border: blue solid 3px;
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    width: 100%;
-    height: 500px;
+    /* width: 100%;
+    height: 500px; */
 }
 
 .sunCard {
     border: red solid 3px;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
 }

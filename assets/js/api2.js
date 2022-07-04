@@ -49,7 +49,7 @@ function sunRiseSet() {
 
                                     sunrise = data.results.sunrise
                                     sunset = data.results.sunset
-                                    // console.log(timezone)
+
                                         // stack overflow start: "https://stackoverflow.com/questions/64863646/convert-date-from-utc-to-est-javascript-html"
                                             // convert UTC sunrise to EST sunrise
                                             var utcSunrise = new Date(sunrise);
@@ -89,22 +89,35 @@ function sunRiseSet() {
                                                     // console.log(typeof estSunrise)
                                 
                                 // print to web
-                                var sunDateBox = document.createElement("p");
-                                var sunriseTimeBox = document.createElement("p");
-                                var sunsetTimeBox = document.createElement("p");
+                                var sunDateBox = document.createElement("p");                                
+                                var sunriseImg = document.createElement("img");
+                                var sunriseTxt = document.createElement("p");
+                                var sunriseRealTime = document.createElement("p");
+                                var sunsetImg = document.createElement("img");
+                                var sunsetTxt = document.createElement("p");
+                                var sunsetRealTime = document.createElement("p");
 
                                 // add bulma class
                                 var sunCard = document.createElement("div");
                                 sunCard.classList.add("sunCard")
+                                // card bg-light shadow px-3 py-3
 
-                                sunDateBox.textContent = newDate;
-                                sunriseTimeBox.textContent = sunriseTime;
-                                sunsetTimeBox.textContent = sunsetTime;
+                                sunDateBox.textContent = newDate;                                
+                                sunriseImg.src = "./assets/images/sunrise-100px.svg";
+                                sunriseTxt.textContent = "Sunrise Time:";
+                                sunriseRealTime.textContent = sunriseTime;
+                                sunsetImg.src = "./assets/images/sunset-100px.svg";
+                                sunsetTxt.textContent = "Sunset Time:";
+                                sunsetRealTime.textContent = sunsetTime;
 
                                 sunCardContainer.append(sunCard);
                                 sunCard.append(sunDateBox);
-                                sunCard.append(sunriseTimeBox);
-                                sunCard.append(sunsetTimeBox);
+                                sunCard.append(sunriseImg);
+                                sunCard.append(sunriseTxt);
+                                sunCard.append(sunriseRealTime);
+                                sunCard.append(sunsetImg);
+                                sunCard.append(sunsetTxt);
+                                sunCard.append(sunsetRealTime);
 
                                 console.log(sunCardContainer);
 
