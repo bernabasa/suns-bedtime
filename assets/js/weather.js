@@ -298,6 +298,11 @@ $("#clearHistory").on("click", function(event){
     currentForecastContainerEl.html("");
     fiveDayContainerEl.html("");
     // console.log("clear button clicked");
+
+    // michael start
+    // clear sunrise sunset data
+    sunCardContainer.textContent = "";
+    // michael end
 });
 
 // clicking on city button in search history re-runs getWeather
@@ -318,5 +323,11 @@ $("#history").on("click", function(event){
         
         // pass to getWeather to re-run call
         getWeather(currentCity);
+
+        // michael start
+        // set city.value to currentCity and recall sunRiseSet in api2.js
+        city.value = currentCity
+        sunRiseSet();
+        // michael end
     }
 });

@@ -2,7 +2,7 @@ var searchButton = document.getElementById("searchBtn");
 var city = document.getElementById("city-input");
 
 var sunCardContainer = document.querySelector(".sunCardContainer")
-
+var sunCard = document.querySelector(".sunCard")
 
 function sunRiseSet() {
 
@@ -134,7 +134,7 @@ function sunRiseSet() {
 
                             // add bulma class
                             var sunCard = document.createElement("div");
-                            sunCard.classList.add("sunCard")
+                            sunCard.classList.add("sunCard", "column", "card", "bg-light", "shadow", "px-3", "py-3", "my-6")
                             // card bg-light shadow px-3 py-3
 
                             sunDateBox.textContent = newDate;                                
@@ -204,7 +204,8 @@ function sunRiseSet() {
     console.log(city.value);
 
 
+    sunCardContainer.textContent = "";
+
 }
 
 searchButton.addEventListener("click", sunRiseSet);
-     
