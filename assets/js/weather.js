@@ -299,10 +299,13 @@ $("#clearHistory").on("click", function(event){
     fiveDayContainerEl.html("");
     // console.log("clear button clicked");
 
+
     // michael start
     // clear sunrise sunset data
     sunCardContainer.textContent = "";
     // michael end
+
+
 });
 
 // clicking on city button in search history re-runs getWeather
@@ -331,3 +334,4 @@ $("#history").on("click", function(event){
         // michael end
     }
 });
+  
