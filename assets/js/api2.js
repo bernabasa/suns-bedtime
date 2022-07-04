@@ -23,6 +23,23 @@ function sunRiseSet() {
 
 
 
+        // first fetch nino start
+
+
+
+        // first fetch nino end
+
+
+
+        // first fetch bernabas start
+
+
+
+        // first fetch bernabas end
+
+
+
+
             // second fetch start
             fetch("https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+lon+"&exclude=minutely,hourly,alerts&units=imperial&appid=ede08bcde83c2fa795daf3201714e151")
             .then(function(response) {
@@ -33,6 +50,24 @@ function sunRiseSet() {
                 console.log(data)
                 timezone = data.timezone
             
+
+
+
+                // second fetch nino start
+
+
+
+                // second fetch nino end
+
+
+
+                // second fetch bernabas start
+
+
+
+                // second fetch bernabas end
+
+
 
 
                         
@@ -88,38 +123,66 @@ function sunRiseSet() {
 
                                                     // console.log(typeof estSunrise)
                                 
-                                // print to web
-                                var sunDateBox = document.createElement("p");                                
-                                var sunriseImg = document.createElement("img");
-                                var sunriseTxt = document.createElement("p");
-                                var sunriseRealTime = document.createElement("p");
-                                var sunsetImg = document.createElement("img");
-                                var sunsetTxt = document.createElement("p");
-                                var sunsetRealTime = document.createElement("p");
+                            // print to web
+                            var sunDateBox = document.createElement("p");                                
+                            var sunriseImg = document.createElement("img");
+                            var sunriseTxt = document.createElement("p");
+                            var sunriseRealTime = document.createElement("p");
+                            var sunsetImg = document.createElement("img");
+                            var sunsetTxt = document.createElement("p");
+                            var sunsetRealTime = document.createElement("p");
 
-                                // add bulma class
-                                var sunCard = document.createElement("div");
-                                sunCard.classList.add("sunCard")
-                                // card bg-light shadow px-3 py-3
+                            // add bulma class
+                            var sunCard = document.createElement("div");
+                            sunCard.classList.add("sunCard")
+                            // card bg-light shadow px-3 py-3
 
-                                sunDateBox.textContent = newDate;                                
-                                sunriseImg.src = "./assets/images/sunrise-100px.svg";
-                                sunriseTxt.textContent = "Sunrise Time:";
-                                sunriseRealTime.textContent = sunriseTime;
-                                sunsetImg.src = "./assets/images/sunset-100px.svg";
-                                sunsetTxt.textContent = "Sunset Time:";
-                                sunsetRealTime.textContent = sunsetTime;
+                            sunDateBox.textContent = newDate;                                
+                            sunriseImg.src = "./assets/images/sunrise-100px.svg";
+                            sunriseTxt.textContent = "Sunrise Time:";
+                            sunriseRealTime.textContent = sunriseTime;
+                            sunsetImg.src = "./assets/images/sunset-100px.svg";
+                            sunsetTxt.textContent = "Sunset Time:";
+                            sunsetRealTime.textContent = sunsetTime;
 
-                                sunCardContainer.append(sunCard);
-                                sunCard.append(sunDateBox);
-                                sunCard.append(sunriseImg);
-                                sunCard.append(sunriseTxt);
-                                sunCard.append(sunriseRealTime);
-                                sunCard.append(sunsetImg);
-                                sunCard.append(sunsetTxt);
-                                sunCard.append(sunsetRealTime);
+                            sunCardContainer.append(sunCard);
+                            sunCard.append(sunDateBox);
+                            sunCard.append(sunriseImg);
+                            sunCard.append(sunriseTxt);
+                            sunCard.append(sunriseRealTime);
+                            sunCard.append(sunsetImg);
+                            sunCard.append(sunsetTxt);
+                            sunCard.append(sunsetRealTime);
 
-                                console.log(sunCardContainer);
+                            console.log(sunCardContainer);
+
+
+
+
+
+                            // third fetch nino start
+
+
+
+
+
+
+                            // third fetch nino end
+
+
+
+                            // third fetch bernabas start
+
+
+
+
+                            
+
+                            // third fetch bernabas end
+
+
+
+
 
                             });
                             // third fetch end
