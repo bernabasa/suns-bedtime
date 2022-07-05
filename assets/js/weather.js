@@ -5,13 +5,15 @@ $(document).ready(function(){
 
 
 var historyContainerEl = $("#history");
-var currentForecastContainerEl = $("#currentForecast");
+//var currentForecastContainerEl = $("#currentForecast");
+var currentForecastContainerEl = $("#weather-api");
 var fiveDayContainerEl = $("#fiveDayForecast");
 var citySearchEl = $("#city-search");
 var cityEl = $("#city-input");
 var cityNameEl = $("#cityName");
 var currentDate = moment().format("L");
 var searchBtnEl = $("#searchBtn");
+const weatherdates = [];
 
 var apiKey = "a96c9b1d9614e04af3a4f5f32e7c7b3e";
 
@@ -45,14 +47,18 @@ var getWeather = function(currentCity){
                     if (response.ok) {
                         response.json().then((data) => {
                                
-                                var currentConditionsDiv = $("<div class='card bg-light shadow px-3 py-3'>");
+                                var currentConditionsDiv = $("<div class='card bg-light shadow px-3 py-3 currentweatherContainer'>");
                                 var currentConditionsCardBody = $("<div class='card-body'>");
                                 var cityNameTitle = $("<h2 class='card-title text-left history-btn'>");
+
+                                var nameofcity = capitalizeFirstLetter(currentCity);
+
+
                                
-                                cityNameTitle.text(currentCity);
+                                cityNameTitle.text(nameofcity);
                                 var currentConditionsDate = $("<h5 class='card-title'>");
                                 currentConditionsDate.text(currentDate);
-                                var currentConditionsIcon = $("<img>");
+                                var currentConditionsIcon = $("<img class='currentweatherIconWidth'>");
                                 var currentConditionsTemp = $("<p class='card-text mb-0'>");
                                 var currentConditionsHumidity = $("<p class='card-text mb-0'>");
                                 var currentConditionsWind = $("<p class='card-text mb-0'>");
@@ -61,6 +67,31 @@ var getWeather = function(currentCity){
                                 currentConditionsUvIndexSpan.attr("id", "uvIndex")
                              
                                 var iconcode = data.current.weather[0].icon;
+                                console.log(iconcode);
+
+                                //document.getElementById('weatherapibox').style.backgroundImage="url(./assets/images/dolphinplaceholder.jpg)";
+                                if (iconcode === "01d" || iconcode === "01n") {
+                                    document.getElementById('weatherapibox').style.backgroundImage="url(./assets/images/clearsky.jpg)";
+                                } else if (iconcode === "02d" || iconcode === "02n") {
+                                    document.getElementById('weatherapibox').style.backgroundImage="url(./assets/images/fewclouds.jpg)";
+                                } else if (iconcode === "03d" || iconcode === "03n") {
+                                    document.getElementById('weatherapibox').style.backgroundImage="url(./assets/images/scatteredclouds.jpg)";
+                                } else if (iconcode === "04d" || iconcode === "04n") {
+                                    document.getElementById('weatherapibox').style.backgroundImage="url(./assets/images/brokenclouds.jpg)";
+                                } else if (iconcode === "09d" || iconcode === "09n") {
+                                    document.getElementById('weatherapibox').style.backgroundImage="url(./assets/images/lightrain.jpg)";
+                                } else if (iconcode === "10d" || iconcode === "10n") {
+                                    document.getElementById('weatherapibox').style.backgroundImage="url(./assets/images/rain.jpg)";
+                                } else if (iconcode === "11d" || iconcode === "11n") {
+                                    document.getElementById('weatherapibox').style.backgroundImage="url(./assets/images/thunderstorm.jpg)";
+                                } else if (iconcode === "13d" || iconcode === "13n") {
+                                    document.getElementById('weatherapibox').style.backgroundImage="url(./assets/images/snow.jpg)";
+                                } else if (iconcode === "50d" || iconcode === "50n") {
+                                    document.getElementById('weatherapibox').style.backgroundImage="url(./assets/images/mist.jpg)";
+                                } else {
+                                    document.getElementById('weatherapibox').style.background="none";
+                                }
+                                document.getElementById('weatherapibox').style.backgroundSize = "100%";
             
                                
                                 currentForecastContainerEl.append(currentConditionsDiv);
@@ -133,16 +164,16 @@ var getWeather = function(currentCity){
                                 var forecastDateString = moment(data.list[i].dt_txt).format("L");
                              
                 
-                                var forecastCol = $("<div class='col-12 col-md-6 col-lg forecast-day mb-3 mt-3'>");
-                                var forecastCard = $("<div class='card bg-secondary bg-gradient shadow'>");
+                                var forecastCol = $("<div class='forecast-day px-3 py-1 my-0 weatherCard'>");
+                                var forecastCard = $("<div class='card bg-secondary bg-gradient shadow suncard'>");
                                 var forecastCardBody = $("<div class='card-body'>");
                                 var forecastDate = $("<h5 class='card-title'>");
                                 forecastDate.text(forecastDateString);
-                                var forecastIcon = $("<img>");
+                                var forecastIcon = $("<img class='weatherIconWidth'>");
                                 var forecastTemp = $("<p class='card-text mb-0'>");
                                 var forecastWind = $("<p class='card-text mb-0'>");
                                 var forecastHumidity = $("<p class='card-text mb-0'>");
-                
+                                //forecastCard.classList.add("column");
                 
                                 fiveDayContainerEl.append(forecastCol);
                                 forecastCol.append(forecastCard);
@@ -175,10 +206,174 @@ var getWeather = function(currentCity){
                                 forecastHumidity.prepend("Humidity: ");
                                 forecastHumidity.append(" %");
                             }
+
+                            //var icon = data.list[i].weather[0].icon;
+                            //var setimage = $("#weatherimage");
+                            //console.log(icon);
+                            //setimage.attr("src", "./assets/images/dolphinplaceholder.jpg");
+
+                            //for (let i = 0; i < 5; i++) {
+                        
+                                //var fdate = moment().add(i, "day").format("M/D/YYYY");
+                                //var ftemp = response.daily[i].temp.day;
+                                //var fwind = response.daily[i].wind_speed;
+                                //var fhumid = response.daily[i].humidity;
+                
+                               // var f1date = $("#futuredate"+i);
+                               // var f1temp = $("#futuretemp"+i);
+                               // var f1wind = $("#futurewind"+i);
+                                //var f1humid = $("#futurehumidity"+i);
+                
+                                //f1date.text(fdate);
+                               // f1temp.text("Temp: "+ftemp);
+                               // f1wind.text("Wind: "+fwind);
+                               // f1humid.text("Humidity: "+fhumid);
+                             
+                               // weatherdates[i] = fdate;
+                                
+                                
+                            //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         })
                     } else {
                         handleErrors();
                     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 })
 
                
@@ -298,7 +493,7 @@ $("#clearHistory").on("click", function(event){
     currentForecastContainerEl.html("");
     fiveDayContainerEl.html("");
     // console.log("clear button clicked");
-
+    document.getElementById('weatherapibox').style.background="none";
 
     // michael start
     // clear sunrise sunset data
@@ -335,3 +530,6 @@ $("#history").on("click", function(event){
     }
 });
   
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
