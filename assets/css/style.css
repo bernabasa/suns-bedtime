@@ -6,26 +6,26 @@
     align-items: center;
     height: 150px;
 }
-#
+
 
 #search-container {
     display: flex;
-    justify-content: left;
-    /*width: 60px; */
+    justify-content: center;
+   /* width: 60px; */
 }
 #city-search {
     display: flex;
-    justify-content: left;
-    /*width: 60px;   */
+    justify-content: center;
+   /* width: 60px;   */
 }
 #city-input {
     display: flex;
-    justify-content: left;
-   /* width: 60px; */
+    justify-content: center;
+    /*width: 60px; */
 }
 #searchBtn {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     /*width: 60px;*/
 }
 
@@ -40,24 +40,105 @@
 #api {
     /* border: red solid 3px; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
 #weather-api {
-    border: red solid 3px;
+    /*border: red solid 3px;*/
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
     height: 500px;
 }
 
-#traffic-api {
+.sunCity {
     border: red solid 3px;
+    width: 100%;
+    text-align: center;
+}
+
+.sunCardContainer {
+    /* border: blue solid 3px; */
+    padding: 50px;
     display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    /* background-image: url('../images/suncard2.jpeg');
+    background-size: cover;
+    background-position: center; */
+}
+
+.sunCard {
+    /* border: red solid 3px; */
+    text-align: center;
+    margin: 0 50px;
+}
+
+/* .sunCardContainer img {
+    object-fit: cover;
+} */
+
+.weatherCardContainer {
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-top: 0%;
+    margin-top: 0%;
+}
+
+.weatherCard {
+    text-align: center;
+    margin: 0 50px;
+}
+
+.weatherIconWidth {
+    width: 400px;
+}
+
+.currentweatherIconWidth {
+    width: 100px;
+    max-height: 70px;
+}
+
+.currentweatherContainer {
+    min-width: 30%;
+    text-align: center;
+    max-height: 60%;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+.centerstyle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;    
+}
+
+.centersearch {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 500px;
+    text-align: center;
+    border: solid red 3px;
+    width: 100%;
+    
+}
+
+#weatherapibox {
+    background-size: 100%;
+}
+
+
+#search-container {
+    width: 100%;
+    text-align: center;
+    border: solid red 3px;
+    display: flex;
+    justify-content: center;
 }
