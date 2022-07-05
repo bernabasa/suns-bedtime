@@ -13,24 +13,24 @@
         <h1 id="title">Title</h1>
     </div>
 
-    <div id="search-container">
+    <div id="search-container" class="container">
         <div class="row">
             <div class="col-12 col-md-3 bg-light mt-3">
                 <form id="city-search">
-                    <label for="city-input" class="my-1">Search for a city:</label>
-                    <div class="input-group mb-3">
-                        <input id="city-input" type="text" class="form-control" placeholder="search" />
+                    <label for="city-input" class="my-1 column is-centered is-mobile is-multiline centerstyle is-full">Search for a city:</label>
+                    <div class="input-group mb-3 column is-centered is-mobile is-multiline centerstyle is-full">
+                        <input id="city-input" type="text" class="form-control column is-centered is-mobile is-multiline centerstyle is-full" placeholder="search" />
                         <div class="input-group-append">
-                            <button id="searchBtn" class="btn btn-primary" type="submit">
-                                <i class="bi bi-search"></i>
+                            <button id="searchBtn" class="btn btn-primary column is-centered is-mobile is-multiline centerstyle is-full" type="submit">Search
+                                <i class="bi bi-search column is-centered is-mobile is-multiline centerstyle is-full"></i>
                             </button>
                         </div>
                     </div>
 
                 </form>
-                <button id="clearHistory" class="btn btn-primary mb-3 col-12 col-md-12" type="button">Clear History</button>
+                <button id="clearHistory" class="btn btn-primary mb-3 col-12 col-md-12 column is-centered is-mobile is-multiline centerstyle is-full" type="button">Clear History</button>
                 
-                <div id="history" class="col-12 col-md 3 bg-light border-top mt-2 pt-2">
+                <div id="history" class="col-12 col-md 3 bg-light border-top mt-2 pt-2 columns">
                 </div>
             </div>
                
@@ -112,70 +112,26 @@
 
         
     <div id="api">
-        <!--Weather Api -->>
-        <div id="weather-api">
+        <!--Weather Api -->
+        <div id="weatherapibox">
+        
+            
             <div>
-                <h2>Weather Forecast</h2>
-            </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <div class="columns">
+
+                <div class="columns is-centered is-mobile is-multiline centerstyle">
+
+                    <div id="weather-api" class="column">
+                        
+                    </div>
+                    
+                    <div id="fiveDayForecast" class="columns weatherCardContainer">
                 
-                <h id="temp"></h>
-                <h id="feels"></h>
-                <h id="weather"></h>
-                <h id="description"></h>
-                <h id="humidity"></h>
-                <img id="weatherimage" src="" alt="">
-            
-                <p id="futuredate0"></p>
-                <p id="futuretemp0"></p>
-                <p id="futurewind0"></p>
-                <p id="futurehumidity0"></p>
-            
-                <p id="futuredate1"></p>
-                <p id="futuretemp1"></p>
-                <p id="futurewind1"></p>
-                <p id="futurehumidity1"></p>
-            
-                <p id="futuredate2"></p>
-                <p id="futuretemp2"></p>
-                <p id="futurewind2"></p>
-                <p id="futurehumidity2"></p>
-            
-                <p id="futuredate3"></p>
-                <p id="futuretemp3"></p>
-                <p id="futurewind3"></p>
-                <p id="futurehumidity3"></p>
-            
-                <p id="futuredate4"></p>
-                <p id="futuretemp4"></p>
-                <p id="futurewind4"></p>
-                <p id="futurehumidity4"></p>
+                    </div>
+                    
+                    
+                </div>
             </div>
+     
             
             
             
@@ -192,6 +148,12 @@
             
             
             
+            
+            
+            
+            
+            
+
             
             
             
@@ -199,9 +161,15 @@
             
             
         </div>
-        <!--Second Api-->>
-        <div id="traffic-api">
-            <h2>Traffic</h2>
+        <!--Second Api-->
+        <div class="sunCity"></div>
+        <div id="sun-api" class="sunCardContainer columns">
+            
+            
+
+            
+            
+          
             
             
             
@@ -226,13 +194,7 @@
             
             
             
-            
-            
-            
-            
-            
-            
-            
+
             
             
             
@@ -309,7 +271,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/utility.js"></script>
-    <script src="./assets/js/api2.js"></script>
     <script src="./assets/js/weather.js"></script>
+    <script src="./assets/js/api2.js"></script>
 </body>
 </html>

@@ -11,22 +11,22 @@
 #search-container {
     display: flex;
     justify-content: left;
-    width: 60px; 
+    /*width: 60px; */
 }
 #city-search {
     display: flex;
     justify-content: left;
-    width: 60px;   
+    /*width: 60px;   */
 }
 #city-input {
     display: flex;
     justify-content: left;
-    width: 60px; 
+   /* width: 60px; */
 }
 #searchBtn {
     display: flex;
     justify-content: left;
-    width: 60px;
+    /*width: 60px;*/
 }
 
 #search {
