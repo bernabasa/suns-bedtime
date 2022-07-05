@@ -54,12 +54,21 @@
     height: 500px;
 }
 
+.sunCity {
+    border: red solid 3px;
+    width: 100%;
+    text-align: center;
+}
+
 .sunCardContainer {
     /* border: blue solid 3px; */
     padding: 50px;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
+    /* background-image: url('../images/suncard2.jpeg');
+    background-size: cover;
+    background-position: center; */
 }
 
 .sunCard {
@@ -67,3 +76,7 @@
     text-align: center;
     margin: 0 50px;
 }
+
+/* .sunCardContainer img {
+    object-fit: cover;
+} */

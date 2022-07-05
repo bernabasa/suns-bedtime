@@ -1,6 +1,6 @@
 var searchButton = document.getElementById("searchBtn");
 var city = document.getElementById("city-input");
-
+var sunCity= document.querySelector(".sunCity")
 var sunCardContainer = document.querySelector(".sunCardContainer")
 var sunCard = document.querySelector(".sunCard")
 
@@ -136,7 +136,8 @@ function sunRiseSet() {
                             var sunCard = document.createElement("div");
                             sunCard.classList.add("sunCard", "column", "card", "bg-light", "shadow", "px-3", "py-3", "my-6")
                             // card bg-light shadow px-3 py-3
-
+                            
+                            sunCity.textContent = "Sunrise & Sunset"
                             sunDateBox.textContent = newDate;                                
                             sunriseImg.src = "./assets/images/sunrise-100px.svg";
                             sunriseTxt.textContent = "Sunrise Time:";
@@ -144,6 +145,9 @@ function sunRiseSet() {
                             sunsetImg.src = "./assets/images/sunset-100px.svg";
                             sunsetTxt.textContent = "Sunset Time:";
                             sunsetRealTime.textContent = sunsetTime;
+
+                            // sunCard.style.backgroundImage = "url('./assets/images/suncard2.jpeg')"
+                            // sunCardContainer.style.backgroundImage = "url('./assets/images/sunbackground.jpeg')"
 
                             sunCardContainer.append(sunCard);
                             sunCard.append(sunDateBox);
