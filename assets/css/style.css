@@ -10,23 +10,23 @@
 
 #search-container {
     display: flex;
-    justify-content: left;
-    width: 60px; 
+    justify-content: center;
+   /* width: 60px; */
 }
 #city-search {
     display: flex;
-    justify-content: left;
-    width: 60px;   
+    justify-content: center;
+   /* width: 60px;   */
 }
 #city-input {
     display: flex;
-    justify-content: left;
-    width: 60px; 
+    justify-content: center;
+    /*width: 60px; */
 }
 #searchBtn {
     display: flex;
-    justify-content: left;
-    width: 60px;
+    justify-content: center;
+    /*width: 60px;*/
 }
 
 #search {
@@ -132,4 +132,13 @@
 
 #weatherapibox {
     background-size: 100%;
+}
+
+
+#search-container {
+    width: 100%;
+    text-align: center;
+    border: solid red 3px;
+    display: flex;
+    justify-content: center;
 }
