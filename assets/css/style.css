@@ -1,56 +1,91 @@
-#title {
-    border: red solid 3px;
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: url('../images/stars.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.title {
+    /* border: red solid 3px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    height: 200px;
+    color: white;
 }
 
 #search-container {
     width: 100%;
     text-align: center;
-    border: solid red 3px;
+    /* border: solid red 3px; */
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
 #city-search {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     /* border: red solid 3px; */
     width: 100%;
+    /* position: sticky;
+    top: 0;
+    z-index: 9999; */
 }
 
 .city-text {
     width: 100%;
     /* border: red solid 3px; */
 }
-.input-group {
+
+/* .input-group {
     width: 100%;
-    /* border: red solid 3px; */
-}
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+} */
 
 #city-input {
     display: flex;
     justify-content: center;
+    border-radius: 15px 0 0 0;
+    opacity: .9;
     /*width: 60px; */
 }
 #searchBtn {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 98%;
+    border: none;
+    border-radius: 0 15px 0 0;
+    background-color: #fce138;
+    color: #024e76;
+    font-weight: bold;
+    opacity: .8;
 }
 
-#search {
+#clearHistory {
+    border-radius: 0 0 15px 15px;
+    margin-top: -2px;
+    background-color: #39a6b2;
+    opacity: .8;
+    color: white;
+    font-weight: bold;
+}
+
+/* #search {
     border: red solid 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 250px;
-}
+} */
 
 #api {
     /* border: red solid 3px; */
@@ -70,14 +105,19 @@
 }
 
 .sunCity {
-    border: red solid 3px;
+    /* border: red solid 3px; */
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
     height: 300px;
-    background-image: url('../images/sunbackground.jpeg');
+    /* background-image: url('../images/sunbackground.jpeg'); */
     background-size: cover;
     background-position: center;
-}
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    place-items: center;
+    color: green;
+} 
 
 .sunCardContainer {
     /* border: blue solid 3px; */
@@ -85,9 +125,9 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    /* background-image: url('../images/suncard2.jpeg');
+    /* background-image: url('../images/suncards.jpeg'); */
     background-size: cover;
-    background-position: center; */
+    background-position: center;
 }
 
 .sunCard {
@@ -95,6 +135,8 @@
     text-align: center;
     margin: 0 50px;
     width: 400px;
+    opacity: .8;
+    border-radius: 15px;
 }
 
 /* .sunCardContainer img {
@@ -144,7 +186,7 @@
     text-align: center;
     margin: 0 50px;
     flex-wrap: wrap;
-    max-width: 260px;
+    max-width: 180px;
 }
 
 .weatherIconWidth {
