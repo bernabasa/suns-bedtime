@@ -4,6 +4,14 @@ var sunCity= document.querySelector(".sunCity")
 var sunCardContainer = document.querySelector(".sunCardContainer")
 var sunCard = document.querySelector(".sunCard")
 
+// for (let i = 0; i < 4; i++) {
+
+//     // sunCard.style.backgroundImage = "url('./assets/images/suncard'"+i+"'.jpeg')"
+//     sunCardBackground.src = "url('./assets/images/suncard'"+i+"'.jpeg')"
+//     console.log(sunCardBackground);
+// }
+// backgroundImageArray = ["./assets/images/suncard0.jpeg","./assets/images/suncard1.jpeg","./assets/images/suncard2.jpeg","./assets/images/suncard3.jpeg","./assets/images/suncard4.jpeg"]
+
 function sunRiseSet() {
 
     // first fetch start
@@ -124,18 +132,26 @@ function sunRiseSet() {
                                                     // console.log(typeof estSunrise)
                                 
                             // print to web
-                            var sunDateBox = document.createElement("p");                                
+                            var sunDateBox = document.createElement("h3");                                
                             var sunriseImg = document.createElement("img");
-                            var sunriseTxt = document.createElement("p");
-                            var sunriseRealTime = document.createElement("p");
+                            var sunriseTxt = document.createElement("h4");
+                            var sunriseRealTime = document.createElement("h5");
                             var sunsetImg = document.createElement("img");
-                            var sunsetTxt = document.createElement("p");
-                            var sunsetRealTime = document.createElement("p");
+                            var sunsetTxt = document.createElement("h4");
+                            var sunsetRealTime = document.createElement("h5");
 
                             // add bulma class
                             var sunCard = document.createElement("div");
-                            sunCard.classList.add("sunCard", "column", "card", "bg-light", "shadow", "px-3", "py-3", "my-6")
+                            sunCard.classList.add("sunCard", "column", "card", "bg-light", "shadow", "px-3", "py-3", "my-6", "is-size-3-mobile")
                             // card bg-light shadow px-3 py-3
+                            
+                            sunDateBox.classList.add("sunDateBox");
+                            sunriseImg.classList.add("sunriseImg");
+                            sunsetImg.classList.add("sunsetImg");
+                            sunriseTxt.classList.add("sunriseTxt");
+                            sunsetTxt.classList.add("sunsetTxt");
+                            sunriseRealTime.classList.add("sunriseRealTime");
+                            sunsetRealTime.classList.add("sunsetRealTime");
                             
                             sunCity.textContent = "Sunrise & Sunset"
                             sunDateBox.textContent = newDate;                                
@@ -145,8 +161,18 @@ function sunRiseSet() {
                             sunsetImg.src = "./assets/images/sunset-100px.svg";
                             sunsetTxt.textContent = "Sunset Time:";
                             sunsetRealTime.textContent = sunsetTime;
+                            
+                            
+                            // printBackgroundImg.style.backgroundImage = 
+                            // for (let i = 0; i < 5; i++) {
+                        
+                            //     // sunCard.style.backgroundImage = "url('./assets/images/suncard'"+i+"'.jpeg')"
+                            //     sunCardBackground.src = "url('./assets/images/suncard'"+i+"'.jpeg')"
+                            //     sunCard.append(sunCardBackground);
+                                                                
+                            // }
 
-                            // sunCard.style.backgroundImage = "url('./assets/images/suncard2.jpeg')"
+                            // sunCardContainer.sunCard.style.backgroundImage = "url('./assets/images/suncard'"+i+"'.jpeg')"
                             // sunCardContainer.style.backgroundImage = "url('./assets/images/sunbackground.jpeg')"
 
                             sunCardContainer.append(sunCard);
