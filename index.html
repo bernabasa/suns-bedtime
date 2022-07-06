@@ -10,25 +10,27 @@
 </head>
 <body>
     <div>
-        <h1 id="title">Title</h1>
+        <h1 class="title is-size-1 is-size-1-mobile is-size-1-desktop is-size-1-widescreen has-text-weight-bold">Sun's Time and Space</h1>
     </div>
 
     <div id="search-container" class="container">
         <div class="row">
             <div>
                 <form id="city-search">
-                    <label for="city-input" class="city-text my-1 column is-centered is-mobile is-multiline centerstyle is-full">Search for a city:</label>
-                    <div class="input-group mb-3 column is-centered is-mobile is-multiline centerstyle is-full">
-                        <input id="city-input" type="text" class="form-control column is-centered is-mobile is-multiline centerstyle is-full" placeholder="search" />
+                    <!-- <label for="city-input" class="city-text my-1 column is-centered is-mobile is-multiline centerstyle is-full">Search for a city:</label> -->
+                    <div class="input-group centerstyle is-full">
+                        <input id="city-input" type="text" class="form-control column is-centered is-mobile" placeholder="Search for a City:" />
                         <div class="input-group-append">
-                            <button id="searchBtn" class="btn btn-primary column is-centered is-mobile is-multiline centerstyle is-full" type="submit">Search
-                                <i class="bi bi-search column is-centered is-mobile is-multiline centerstyle is-full"></i>
+                            <button id="searchBtn" class="" type="submit">
+                                <i class="bi bi-search column is-centered is-mobile is-multiline centerstyle is-full">Search</i>
                             </button>
                         </div>
+                        <button id="clearHistory" class="btn btn-primary column is-mobile is-tablet is-centered centerstyle is-full" type="button">Clear History</button>
+
                     </div>
 
                 </form>
-                <button id="clearHistory" class="btn btn-primary mb-3 col-12 col-md-12 column is-centered is-mobile is-multiline centerstyle is-full" type="button">Clear History</button>
+                <!-- <button id="clearHistory" class="btn btn-primary column is-centered centerstyle is-full" type="button">Clear History</button> -->
                 
                 <div id="history" class="col-12 col-md 3 bg-light border-top mt-2 pt-2 columns">
                 </div>
@@ -39,6 +41,8 @@
                 </div>
         </div>
     </div>
+
+
     
             
         
@@ -162,12 +166,12 @@
             
         </div>
         <!--Second Api-->
-        <div class="sunCity"></div>
+        <div class="sunCity is-size-1 is-size-1-mobile is-size-1-desktop is-size-1-widescreen has-text-weight-bold"></div>
         <div id="sun-api" class="sunCardContainer columns is-multiline">
             
             
 
-            
+
             
           
             

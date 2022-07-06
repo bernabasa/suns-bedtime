@@ -153,7 +153,7 @@ function sunRiseSet() {
                             sunriseRealTime.classList.add("sunriseRealTime");
                             sunsetRealTime.classList.add("sunsetRealTime");
                             
-                            sunCity.textContent = "Sunrise & Sunset"
+                            sunCity.textContent = "Sunrise and Sunset Times"
                             sunDateBox.textContent = newDate;                                
                             sunriseImg.src = "./assets/images/sunrise-100px.svg";
                             sunriseTxt.textContent = "Sunrise Time:";
@@ -171,9 +171,11 @@ function sunRiseSet() {
                             //     sunCard.append(sunCardBackground);
                                                                 
                             // }
+                            // sunCard.style.backgroundImage = 'url(./assets/images/suncard'+i+'.jpeg)'
+                            // sunCard.setAttribute("id", `sunCard${i}`)
 
-                            // sunCardContainer.sunCard.style.backgroundImage = "url('./assets/images/suncard'"+i+"'.jpeg')"
-                            // sunCardContainer.style.backgroundImage = "url('./assets/images/sunbackground.jpeg')"
+                            sunCity.style.backgroundImage = 'url(./assets/images/suncards.jpeg)'
+                            sunCardContainer.style.backgroundImage = 'url(./assets/images/sunbackground.jpeg)'
 
                             sunCardContainer.append(sunCard);
                             sunCard.append(sunDateBox);

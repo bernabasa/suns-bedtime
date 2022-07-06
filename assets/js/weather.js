@@ -497,7 +497,8 @@ $("#clearHistory").on("click", function(event){
 
     // michael start
     // clear sunrise sunset data
-    sunCardContainer.textContent = "";
+    sunCity.style.display = "none";
+    sunCardContainer.style.display = "none";
     // michael end
 
 
