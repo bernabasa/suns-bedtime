@@ -17,21 +17,8 @@ To address weather and traffic data.
  * CSS 
  * JavaScript
 
+## URL'S
 
-
-
-
->>>>>>> main
-
-
-
-
-<<<<<<< workarea1
-## Built with
- * HTML 
- * CSS 
- * JavaScript
-
-
-=======
->>>>>>> main
+ *The URL of the deployed application: 
+ 
+ *The URL of the GitHub repository: 
