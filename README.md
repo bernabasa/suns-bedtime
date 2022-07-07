@@ -17,6 +17,6 @@ To address weather and traffic data.
 
 ## URL'S
 
- *The URL of the deployed application: 
+ *The URL of the deployed application: https://bernabasa.github.io/suns-bedtime/
  
  *The URL of the GitHub repository: https://github.com/bernabasa/suns-bedtime
